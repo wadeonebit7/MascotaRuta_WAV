@@ -48,13 +48,16 @@ public class RegistrarMascotaActivity extends AppCompatActivity {
 
             String generoSelect = radioSelect.getText().toString();
 
-            Intent intent = new Intent( RegistrarMascotaActivity.this, ConfirmacionActivity.class);
+            Intent intent = new Intent(RegistrarMascotaActivity.this, ConfirmacionActivity.class);
 
             intent.putExtra("NOMBRE", nombrePerruno);
             intent.putExtra("GENERO", generoSelect);
 
+            Intent intentRecibido = getIntent();
+            String estado2 = intentRecibido.getStringExtra("ESTADO");
+            intent.putExtra("ESTADO", estado2);
+
             startActivity(intent);
+        });
     }
-
-
 }

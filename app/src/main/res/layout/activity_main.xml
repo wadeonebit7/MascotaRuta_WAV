@@ -13,6 +13,7 @@
         android:layout_height="108dp"
         android:text="Bienvenido a MascotaRuta"
         android:textSize="40dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.635"

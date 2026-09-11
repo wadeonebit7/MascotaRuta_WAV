@@ -12,6 +12,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button btnTutor;
+    Button btnRescatista;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,10 +25,24 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Button btn = findViewById(R.id.btnTutor);
+        btnTutor = findViewById(R.id.btnTutor);
         btn.setOnClickListener(v -> {
-           Intent intent = new Intent(MainActivity.this, RegistrarMascotaActivity.class);
-           startActivity(intent);
+            String estado = "Rescatista";
+            Intent intent = new Intent(MainActivity.this, RegistrarMascotaActivity.class);
+
+            intent.putExtra("ESTADO", estado);
+
+            startActivity(intent);
+        });
+
+        btnRescatista = findViewById(R.id.btnRescatista);
+        btn.setOnClickListener(v -> {
+            String estado = "Rescatista";
+            Intent intent = new Intent(MainActivity.this, RegistrarMascotaActivity.class);
+
+            intent.putExtra("ESTADO", estado);
+
+            startActivity(intent);
         });
     }
 }
