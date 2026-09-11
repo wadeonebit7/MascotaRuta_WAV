@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         btnTutor = findViewById(R.id.btnTutor);
-        btn.setOnClickListener(v -> {
-            String estado = "Rescatista";
+        btnTutor.setOnClickListener(v -> {
+            String estado = "Tutor";
             Intent intent = new Intent(MainActivity.this, RegistrarMascotaActivity.class);
 
             intent.putExtra("ESTADO", estado);
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnRescatista = findViewById(R.id.btnRescatista);
-        btn.setOnClickListener(v -> {
+        btnRescatista.setOnClickListener(v -> {
             String estado = "Rescatista";
             Intent intent = new Intent(MainActivity.this, RegistrarMascotaActivity.class);
 
