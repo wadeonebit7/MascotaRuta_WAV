@@ -7,4 +7,75 @@
     android:layout_height="match_parent"
     tools:context=".RegistrarMascotaActivity">
 
+    <TextView
+        android:id="@+id/titleMascota"
+        android:layout_width="329dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="48dp"
+        android:text="Datos Mascota"
+        android:textSize="48dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="41dp" />
+
+    <TextView
+        android:layout_width="157dp"
+        android:layout_height="27dp"
+        android:text="Nombre Perruno:"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="309dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/rgGenero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleMascota"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <RadioGroup
+        android:id="@+id/rgGenero"
+        android:layout_width="198dp"
+        android:layout_height="134dp"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbHembra"
+            android:layout_width="180dp"
+            android:layout_height="55dp"
+            android:text="Hembra"
+            android:textSize="16dp" />
+
+        <RadioButton
+            android:id="@+id/rbMacho"
+            android:layout_width="180dp"
+            android:layout_height="55dp"
+            android:text="Macho"
+            android:textSize="16dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="64dp"
+        android:text="Registrar"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
